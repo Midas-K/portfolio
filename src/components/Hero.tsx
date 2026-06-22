@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Mail } from 'lucide-react'
 import { profile, stats } from '../data/profile'
+import { ContactDetails } from './ContactDetails'
 
 export function Hero() {
   return (
@@ -64,17 +65,15 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="flex flex-col gap-4"
           >
-            <div className="card card-hover overflow-hidden p-2">
-              <div className="relative overflow-hidden rounded-xl">
-                <img
-                  src={profile.image}
-                  alt={profile.imageAlt}
-                  width={640}
-                  height={800}
-                  className="aspect-[4/5] w-full object-cover object-top"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-              </div>
+            <div className="card card-hover overflow-hidden">
+              <img
+                src={profile.image}
+                alt={profile.imageAlt}
+                width={640}
+                height={800}
+                className="aspect-[4/5] w-full object-cover object-top"
+              />
+              <ContactDetails />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
