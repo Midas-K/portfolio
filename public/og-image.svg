@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#030305"/>
+      <stop offset="0.45" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="120" x2="1080" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(900 120) rotate(90) scale(280)">
+      <stop stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="72" y="72" width="1056" height="486" rx="32" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <rect x="120" y="120" width="72" height="72" rx="18" fill="url(#accent)"/>
+  <text x="216" y="168" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">VP</text>
+  <text x="120" y="268" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Vikesh Patel</text>
+  <text x="120" y="338" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600">Staff AI &amp; Machine Learning Engineer</text>
+  <text x="120" y="410" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="28">LLMs · MLOps · Enterprise AI · Production ML Systems</text>
+  <text x="120" y="500" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="24">22 projects · Fortune 500 clients · RegTech · FinTech · Healthcare AI</text>
+</svg>
