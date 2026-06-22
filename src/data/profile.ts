@@ -5,7 +5,7 @@ export const profile = {
   email: 'Peal858@outlook.com',
   image: '/profile.png',
   imageAlt: 'Professional headshot of Vikesh Patel',
-  phones: ['+880 (161) 657-0487', '+1 (763) 296-7630'],
+  phones: ['+880 (161) 657-0487'],
   address: {
     line1: 'Road No: 09, 2a, 10',
     city: 'Dhaka',
