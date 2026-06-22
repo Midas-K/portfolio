@@ -63,7 +63,6 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="flex flex-col gap-4"
           >
             <div className="card card-hover overflow-hidden">
               <img
@@ -75,24 +74,24 @@ export function Hero() {
               />
               <ContactDetails />
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + i * 0.08 }}
-                  className={`card card-hover p-5 sm:p-6 ${i === 0 ? 'col-span-2' : ''}`}
-                >
-                  <p className="font-display text-2xl font-bold sm:text-3xl">
-                    <span className="text-gradient">{stat.value}</span>
-                  </p>
-                  <p className="mt-1.5 text-sm t-muted">{stat.label}</p>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
+        </div>
+
+        <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + i * 0.08 }}
+              className="card card-hover p-5 text-center sm:p-6"
+            >
+              <p className="font-display text-2xl font-bold sm:text-3xl">
+                <span className="text-gradient">{stat.value}</span>
+              </p>
+              <p className="mt-1.5 text-sm t-muted">{stat.label}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
