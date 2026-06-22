@@ -3,6 +3,8 @@ export const profile = {
   title: 'Staff AI & Machine Learning Engineer',
   tagline: 'Designing scalable, production-grade AI systems that drive measurable business impact.',
   email: 'Peal858@outlook.com',
+  image: '/profile.png',
+  imageAlt: 'Professional headshot of Vikesh Patel',
   phones: ['+880 (161) 657-0487', '+1 (763) 296-7630'],
   address: {
     line1: 'Road No: 09, 2a, 10',

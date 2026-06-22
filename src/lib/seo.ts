@@ -73,7 +73,7 @@ export function getPersonSchema() {
     email: profile.email,
     telephone: profile.phones,
     url: siteConfig.siteUrl,
-    image: getOgImageUrl(),
+    image: `${siteConfig.siteUrl}${profile.image}`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: profile.address.line1,

@@ -34,7 +34,23 @@ export function About() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card card-hover lg:col-span-8 p-8 sm:p-10"
+            className="card card-hover overflow-hidden lg:col-span-3"
+          >
+            <img
+              src={profile.image}
+              alt={profile.imageAlt}
+              width={480}
+              height={600}
+              className="aspect-[4/5] w-full object-cover object-top"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="card card-hover lg:col-span-5 p-8 sm:p-10"
           >
             <p className="text-lg leading-[1.8] t-body sm:text-xl sm:leading-[1.85]">
               {profile.summary}

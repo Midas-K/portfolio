@@ -62,22 +62,37 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="grid grid-cols-2 gap-4"
+            className="flex flex-col gap-4"
           >
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + i * 0.08 }}
-                className={`card card-hover p-6 ${i === 0 ? 'col-span-2' : ''}`}
-              >
-                <p className="font-display text-3xl font-bold sm:text-4xl">
-                  <span className="text-gradient">{stat.value}</span>
-                </p>
-                <p className="mt-2 text-sm t-muted">{stat.label}</p>
-              </motion.div>
-            ))}
+            <div className="card card-hover overflow-hidden p-2">
+              <div className="relative overflow-hidden rounded-xl">
+                <img
+                  src={profile.image}
+                  alt={profile.imageAlt}
+                  width={640}
+                  height={800}
+                  className="aspect-[4/5] w-full object-cover object-top"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + i * 0.08 }}
+                  className={`card card-hover p-5 sm:p-6 ${i === 0 ? 'col-span-2' : ''}`}
+                >
+                  <p className="font-display text-2xl font-bold sm:text-3xl">
+                    <span className="text-gradient">{stat.value}</span>
+                  </p>
+                  <p className="mt-1.5 text-sm t-muted">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
